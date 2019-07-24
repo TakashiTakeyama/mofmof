@@ -16,7 +16,7 @@ class PropertiesController < ApplicationController
   # GET /properties/new
   def new
     @property = Property.new
-    @property.sts.build
+    2.times {@property.sts.build}
   end
 
   # GET /properties/1/edit

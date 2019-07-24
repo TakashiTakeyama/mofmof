@@ -10,6 +10,7 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
+    @sts = St.all
   end
 
   # GET /properties/new
@@ -26,7 +27,6 @@ class PropertiesController < ApplicationController
   # POST /properties.json
   def create
     @property = Property.new(property_params)
-    # binding.pry
 
     respond_to do |format|
       if @property.save

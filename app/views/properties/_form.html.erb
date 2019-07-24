@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :price %>
-    <%= f.number_field :price %>
+    <%= f.number_field :price %><%= "円" %>
   </div>
 
   <div class="field">
@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= f.label :age %>
-    <%= f.number_field :age %>
+    <%= f.number_field :age %><%= "年" %>
   </div>
 
   <div class="field">
@@ -50,11 +50,11 @@
 
     <div class="field">
       <%= f.label :minute %>
-      <%= f.text_field :minute %>
+      <%= f.text_field :minute %><%= "分" %>
     </div>
+    <% end %>
 
   <div class="actions">
     <%= f.submit("登録する") %>
   </div>
-    <% end %>
 <% end %>

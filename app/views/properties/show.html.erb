@@ -26,12 +26,22 @@
   <%= @property.remarks %>
 </p>
 
+  <% @property.sts.each do |prop| %>
 <p>
   <strong>route_name:</strong>
-  <% @property.sts.each do |prop| %>
   <%= prop.route_name %>
-    <% end %>
 </p>
 
-<%= link_to 'Edit', edit_property_path(@property) %> |
-<%= link_to 'Back', properties_path %>
+<p>
+  <strong>route_name:</strong>
+  <%= prop.station %>
+</p>
+
+<p>
+<strong>route_name:</strong>
+  <%= prop.minute %>
+</p>
+    <% end %>
+
+<%= link_to '編集', edit_property_path(@property) %> |
+<%= link_to '戻る', properties_path %>

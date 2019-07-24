@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :address %>
-    <%= f.text_area :address %>
+    <%= f.text_field :address %>
   </div>
 
   <div class="field">
@@ -42,8 +42,18 @@
       <%= f.text_field :route_name %>
     </div>
 
+    <div class="field">
+      <%= f.label :station %>
+      <%= f.text_field :station %>
+    </div>
+
+    <div class="field">
+      <%= f.label :minute %>
+      <%= f.text_field :minute %>
+    </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit("登録する") %>
   </div>
     <% end %>
 <% end %>

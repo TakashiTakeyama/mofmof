@@ -74,6 +74,8 @@ class PropertiesController < ApplicationController
       params.require(:property).permit(:name, :price, :address, :age, :remarks,
                                        sts_attributes:[
                                          :route_name,
+                                         :station,
+                                         :minute
                                        ])
     end
 end

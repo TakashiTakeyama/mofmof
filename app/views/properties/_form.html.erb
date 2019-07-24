@@ -36,7 +36,14 @@
     <%= f.text_area :remarks %>
   </div>
 
+  <%= f.fields_for :sts do |f| %>
+    <div class="field">
+      <%= f.label :route_name %>
+      <%= f.text_field :route_name %>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+    <% end %>
 <% end %>

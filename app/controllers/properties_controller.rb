@@ -15,6 +15,7 @@ class PropertiesController < ApplicationController
   # GET /properties/new
   def new
     @property = Property.new
+    @property.sts.build
   end
 
   # GET /properties/1/edit
@@ -25,6 +26,7 @@ class PropertiesController < ApplicationController
   # POST /properties.json
   def create
     @property = Property.new(property_params)
+    # binding.pry
 
     respond_to do |format|
       if @property.save
@@ -69,6 +71,9 @@ class PropertiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def property_params
-      params.require(:property).permit(:name, :price, :address, :age, :remarks)
+      params.require(:property).permit(:name, :price, :address, :age, :remarks,
+                                       sts_attributes:[
+                                         :route_name,
+                                       ])
     end
 end

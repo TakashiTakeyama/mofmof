@@ -10,7 +10,7 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
-    @sts = St.all
+    # @sts = St.all
   end
 
   # GET /properties/new

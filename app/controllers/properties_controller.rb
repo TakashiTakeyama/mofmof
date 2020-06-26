@@ -10,13 +10,12 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
-    @sts = St.all
   end
 
   # GET /properties/new
   def new
     @property = Property.new
-    @property.sts.build
+    2.times {@property.sts.build}
   end
 
   # GET /properties/1/edit

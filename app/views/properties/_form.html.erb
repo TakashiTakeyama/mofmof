@@ -36,8 +36,9 @@
     <%= f.text_area :remarks %>
   </div>
 
-  <h3>最寄り駅1</h3>
+  <% x = 1 %>
   <%= f.fields_for :sts do |f| %>
+  <h3>最寄り駅<%= x %></h3>
     <div class="field">
       <%= f.label :route_name %>
       <%= f.text_field :route_name %>
@@ -52,9 +53,25 @@
       <%= f.label :minute %>
       <%= f.text_field :minute %><%= "分" %>
     </div>
+    <% x += 1 %>
     <% end %>
 
   <div class="actions">
     <%= f.submit("登録する") %>
   </div>
 <% end %>
+
+<%# x = 1 %>
+<%#= f.fields_for :sts do |st| %>
+<!--  <h3>最寄り駅<%#= x %></h3>-->
+<!--  路線名<br>-->
+<!--  <%#= st.text_field :route_name %><br><br>-->
+<!--  駅名<br>-->
+<!--  <%#= st.text_field :station_name %><br><br>-->
+<!--  徒歩分数<br>-->
+<!--  <%#= st.text_field :walking_minutes %>分<br><br>-->
+  <%# x += 1 %>
+<%# end %>
+<!--<br>-->
+<!--<%#= f.submit "登録する" %><br>-->
+<%#= link_to "戻る", rentals_path %>
